@@ -132,19 +132,19 @@ col_totalsOavg = [(x / ensembleCount) for x in col_totalsO]
 # set up figure and axes
 plt.subplot(2, 1, 1)
 plt.plot(X, col_totalsEavg, color="magenta")
-plt.title('Variation of Network Performance with Rewiring Probability \n Iterations = %s |  k = %s | Ensemble Count= '
-          '%s \n \n' % (n, k, ensembleCount))
+plt.title("\n Variation of Network Performance with Rewiring Probability \n %s neruons with %s memory states \n "
+          "Iterations = %s |  k = %s | Ensemble Count= ""%s \n \n" % (n, m, n_i, k, ensembleCount))
 plt.ylabel("average quality q")
-plt.xlabel("rewiring probability p")
 
 plt.subplot(2, 1, 2)
-plt.ylabel('average overlap m')
-plt.xlabel('rewiring probability p')
+plt.ylabel("average overlap m")
+plt.xlabel("rewiring probability p \n")
 plt.plot(X, col_totalsOavg, color="blue")
 
 suffix = datetime.datetime.now().strftime("%m%d_%H%M%S")
 filename = "_".join([str(n), str(m), str(k), str(n_i), str(ensembleCount), suffix])
-plt.savefig(filename)
+plt.autoscale()
+plt.savefig(filename, dpi=200, bbox_inches = "tight")
 plt.show()
 
 np.savetxt(filename + "-s-Q.csv", np.column_stack((X, col_totalsEavg)), delimiter=",", fmt='%s')
