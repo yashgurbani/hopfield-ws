@@ -16,7 +16,7 @@ from random import randrange
 import random
 
 div = 100
-
+#test if this works from windows
 n = int(input('Enter # of neurons'))
 m = int(input('Enter # of memory states'))
 flip = round(0.25 * n)
