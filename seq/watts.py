@@ -31,9 +31,9 @@ for a in range(0, m):
     MemoryMatrix[a] = mem
     x = 0
 
-k = int(input('Enter k'))
+k = int(input('Enter # of connected neighbours k'))
+n_i = int(input('Enter # of iterations each run'))
 ensembleCount = int(input('Enter # of runs to average over'))
-n_i = int(input('Enter # of iterations'))
 
 suffix = datetime.datetime.now().strftime("%m%d_%H%M%S")
 filename = "_".join([str(n), str(m), str(k), str(n_i), str(ensembleCount), suffix])
