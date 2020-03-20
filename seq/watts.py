@@ -45,7 +45,7 @@ EtaMatrixn = np.zeros((ensembleCount, div))  # initiate quality matrix
 
 for b in tqdm(range(ensembleCount)):
     u = []
-    u = MemoryMatrix[0].copy()  # copy M1 to initial state
+    u = MemoryMatrix[1].copy()  # copy M1 to initial state
     hammingtemp = overlaptemp = 0
     hammingavg = overlapavg = 0
     Y = []
@@ -59,7 +59,7 @@ for b in tqdm(range(ensembleCount)):
     n_fin = n_init + flip
 
     for count in range(n_init, n_fin):  # sequentially pick up 25% of bits and flip them
-        u[count] = (MemoryMatrix[0][count] * -1)
+        u[count] = (MemoryMatrix[1][count] * -1)
 
     for rho in (range(100)):  # for this given random matrix, loop over different p values
 

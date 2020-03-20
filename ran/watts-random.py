@@ -45,7 +45,7 @@ EtaMatrixn = np.zeros((ensembleCount, div))  # initiate quality matrix
 
 for b in tqdm(range(ensembleCount)):
     u = []
-    u = MemoryMatrix[0].copy()  # copy M1 to initial state
+    u = MemoryMatrix[2].copy()  # copy M2 to initial state
     hammingtemp = overlaptemp = 0
     hammingavg = overlapavg = 0
     Y = []
