@@ -3,7 +3,6 @@
 """
 @author: yash
 """
-#this is just a test
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
 import numpy as np
@@ -17,7 +16,6 @@ import random
 
 div = 100
 n_i = 10000
-
 n = int(input('Enter # of neurons'))
 m = int(input('Enter # of memory states'))
 flip = round(0.25 * n)
