@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-%matplotlib inline
 @author: yash
 """
 
@@ -16,7 +15,7 @@ from random import randrange
 import random
 
 div = 100
-#test if this works from windows
+#yes it works
 n = int(input('Enter # of neurons'))
 m = int(input('Enter # of memory states'))
 flip = round(0.25 * n)
