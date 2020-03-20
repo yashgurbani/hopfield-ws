@@ -16,7 +16,6 @@ from random import randrange
 import random
 
 div = 100
-n_i = 10000
 
 n = int(input('Enter # of neurons'))
 m = int(input('Enter # of memory states'))
@@ -34,7 +33,8 @@ for a in range(0, m):
     x = 0
 
 k = int(input('Enter k'))
-ensembleCount = int(input('Enter # of iterations'))
+ensembleCount = int(input('Enter # of runs to average over'))
+n_i = int(input('Enter # of iterations'))
 
 suffix = datetime.datetime.now().strftime("%m%d_%H%M%S")
 filename = "_".join([str(n), str(m), str(k), str(n_i), str(ensembleCount), suffix])
