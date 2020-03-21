@@ -3,8 +3,8 @@
 """
 @author: yash
 """
+
 import matplotlib.pyplot as plt
-from matplotlib.pyplot import figure
 import numpy as np
 import networkx as nx
 from random import choice
@@ -14,62 +14,53 @@ from tqdm import tqdm
 from random import randrange
 import random
 
-div = 100
 n = int(input('Enter # of neurons'))
-m = int(input('Enter # of memory states'))
 flip = round(0.25 * n)
-
-MemoryMatrix = np.zeros((m, n))
-
-for a in range(0, m):
-    mem = []
-    for i in range(0, n):
-        x = choice([1, -1])
-        mem.append(x)
-
-    MemoryMatrix[a] = mem
-    x = 0
-
-k = int(input('Enter # of connected neighbours k'))
+m_up = round(0.3 * n)
+div = m_up
+p = (input('Enter probability of rewiring p'))
 n_i = int(input('Enter # of iterations each run'))
 ensembleCount = int(input('Enter # of runs to average over'))
 
-
-
-suffix = datetime.datetime.now().strftime("%m%d_%H%M%S")
-filename = "_".join([str(n), str(m), str(k), str(n_i), str(ensembleCount), suffix])
-np.savetxt(filename + "-ms-r.csv", np.column_stack((np.transpose(MemoryMatrix))), delimiter=",", fmt='%s')
 
 OverlapMatrixn = np.zeros((ensembleCount, div))  # initiate overlap matrix
 EtaMatrixn = np.zeros((ensembleCount, div))  # initiate quality matrix
 
 for b in tqdm(range(ensembleCount)):
+
+    MemoryMatrix = np.zeros((m_up, n))
+
+    for a in range(0, m_up):
+        mem = []
+    for i in range(0, n):
+        x = choice([1, -1])
+    mem.append(x)
+    MemoryMatrix[a] = mem
+
     u = []
-    u = MemoryMatrix[2].copy()  # copy M2 to initial state
+    u = MemoryMatrix[1].copy()  # copy M1 to initial state
     hammingtemp = overlaptemp = 0
     hammingavg = overlapavg = 0
     Y = []
     Y2 = []
     X = []
 
-    rho = 0
-    p = 0
+    n_init = random.randint(0, (n - flip))  # start at a random position in the initial state
+    n_fin = n_init + flip
+
+    for count in range(n_init, n_fin):  # sequentially pick up 25% of bits and flip them
+        u[count] = (MemoryMatrix[1][count] * -1)
 
 
-    rs = random.sample(range(0,n), flip)
+    for m in range(1, (m_up+1)):  # for this given random matrix, loop over different p values
 
-    for p in list(rs): #randomly pick up 25 percent and flip them
-        u[p] = (MemoryMatrix[2][p] * -1)
-
-
-    for rho in (range(100)):  # for this given random matrix, loop over different p values
-
-        p = (rho / div)
+        x = 0
         hammingtemp = overlaptemp = 0
         hammingval = overlapval = 0
-        q = 0
 
-        g = nx.watts_strogatz_graph(n, k, p)
+        q = 0
+        k = round(0.15*n)
+        g = nx.watts_strogatz_graph(n, k , 0.4)
 
         # g.pos = {}
         # for x in range(4):
@@ -114,7 +105,7 @@ for b in tqdm(range(ensembleCount)):
         overlapval = (overlaptemp / (n * m))
 
         q = ((n - hammingval) / n)
-        X.append(p)
+        X.append(m)
         Y.append(q)
         Y2.append(overlapval)
 
@@ -132,21 +123,21 @@ col_totalsOavg = [(x / ensembleCount) for x in col_totalsO]
 
 # set up figure and axes
 plt.subplot(2, 1, 1)
-plt.plot(X, col_totalsEavg, color="magenta")
-plt.title("\n Variation of Network Performance with Rewiring Probability \n %s neruons with %s memory states \n "
-          "Iterations = %s |  k = %s | Ensemble Count= ""%s \n \n" % (n, m, n_i, k, ensembleCount))
+plt.plot(X, col_totalsEavg, color="black")
+plt.title("\n Variation of Network Performance with Memory Size\n %s neurons with %s nearest neighbours \n "
+          "Iterations = %s | Ensemble Count= %s \n \n" % (n, k, n_i, ensembleCount))
 plt.ylabel("average quality q")
 
 plt.subplot(2, 1, 2)
 plt.ylabel("average overlap m")
-plt.xlabel("rewiring probability p \n")
-plt.plot(X, col_totalsOavg, color="blue")
+plt.xlabel("no of memory states m \n")
+plt.plot(X, col_totalsOavg, color="purple")
 
 suffix = datetime.datetime.now().strftime("%m%d_%H%M%S")
-filename = "_".join([str(n), str(m), str(k), str(n_i), str(ensembleCount), suffix])
+filename = "_".join([str(n), str(p), str(k), str(n_i), str(ensembleCount), suffix, ".png"])
 plt.autoscale()
 plt.savefig(filename, dpi=200, bbox_inches = "tight")
 plt.show()
 
-np.savetxt(filename + "-r-Q.csv", np.column_stack((X, col_totalsEavg)), delimiter=",", fmt='%s')
-np.savetxt(filename + "-r-O.csv", np.column_stack((X, col_totalsOavg)), delimiter=",", fmt='%s')
+np.savetxt(filename + "-s-Q.csv", np.column_stack((X, col_totalsEavg)), delimiter=",", fmt='%s')
+np.savetxt(filename + "-s-O.csv", np.column_stack((X, col_totalsOavg)), delimiter=",", fmt='%s')
