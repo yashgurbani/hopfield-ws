@@ -22,20 +22,20 @@ p = (input('Enter probability of rewiring p'))
 n_i = int(input('Enter # of iterations each run'))
 ensembleCount = int(input('Enter # of runs to average over'))
 
-
 OverlapMatrixn = np.zeros((ensembleCount, div))  # initiate overlap matrix
 EtaMatrixn = np.zeros((ensembleCount, div))  # initiate quality matrix
+MemoryMatrix = np.zeros((m_up, n))
+
+for a in range(0, m_up):
+    mem = []
+for i in range(0, n):
+    x = choice([1, -1])
+mem.append(x)
+MemoryMatrix[a] = mem
+
 
 for b in tqdm(range(ensembleCount)):
 
-    MemoryMatrix = np.zeros((m_up, n))
-
-    for a in range(0, m_up):
-        mem = []
-    for i in range(0, n):
-        x = choice([1, -1])
-    mem.append(x)
-    MemoryMatrix[a] = mem
 
     u = []
     u = MemoryMatrix[1].copy()  # copy M1 to initial state
