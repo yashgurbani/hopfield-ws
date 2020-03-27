@@ -54,7 +54,6 @@ for b in tqdm(range(ensembleCount)):
     X = []
     p = 0
 
-
     rs = random.sample(range(0,n), flip)
 
     for p in list(rs): #randomly pick up 25 percent and flip them
@@ -103,12 +102,10 @@ for b in tqdm(range(ensembleCount)):
             z = z + 1
 
         # calculate hamming distances and overlap for all the memory states
-        for v in range(0, m):
-            for i in list(g.nodes):
-                hammingtemp += abs(g.nodes[i]['state'] - MemoryMatrix[v][i])
 
         for i in list(g.nodes):
             overlaptemp += (MemoryMatrix[target][i] * g.nodes[i]['state'])
+            hammingtemp += abs(g.nodes[i]['state'] - MemoryMatrix[target][i])
 
         hammingval = (hammingtemp / (m * 2))
         overlapval = (overlaptemp / n)

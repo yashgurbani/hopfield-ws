@@ -102,14 +102,10 @@ for b in tqdm(range(ensembleCount)):
             z = z + 1
 
         # calculate hamming distances and overlap for all the memory states
-        i = v = 0
-        for v in range(0, m):
-            for i in list(g.nodes):
-                hammingtemp += abs(g.nodes[i]['state'] - MemoryMatrix[v][i])
 
         for i in list(g.nodes):
             overlaptemp += (MemoryMatrix[target][i] * g.nodes[i]['state'])
-
+            hammingtemp += abs(g.nodes[i]['state'] - MemoryMatrix[target][i])
 
         hammingval = (hammingtemp / (m * 2))
         overlapval = (overlaptemp / n)
