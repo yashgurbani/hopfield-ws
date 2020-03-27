@@ -34,7 +34,7 @@ for a in range(0, m):
 k = int(input('Enter # of connected neighbours k'))
 n_i = int(input('Enter # of iterations each run'))
 ensembleCount = int(input('Enter # of runs to average over'))
-
+target = int(input('Select memory state which when added noise gives initial state'))
 
 
 suffix = datetime.datetime.now().strftime("%m%d_%H%M%S")
@@ -46,7 +46,7 @@ EtaMatrixn = np.zeros((ensembleCount, div))  # initiate quality matrix
 
 for b in tqdm(range(ensembleCount)):
     u = []
-    u = MemoryMatrix[2].copy()  # copy M2 to initial state
+    u = MemoryMatrix[target].copy()  # copy M2 to initial state
     hammingtemp = overlaptemp = 0
     hammingavg = overlapavg = 0
     Y = []
@@ -58,7 +58,7 @@ for b in tqdm(range(ensembleCount)):
     rs = random.sample(range(0,n), flip)
 
     for p in list(rs): #randomly pick up 25 percent and flip them
-        u[p] = (MemoryMatrix[2][p] * -1)
+        u[p] = (MemoryMatrix[target][p] * -1)
 
 
     for rho in (range(0, 100)):  # for this given random matrix, loop over different p values
@@ -106,10 +106,12 @@ for b in tqdm(range(ensembleCount)):
         for v in range(0, m):
             for i in list(g.nodes):
                 hammingtemp += abs(g.nodes[i]['state'] - MemoryMatrix[v][i])
-                overlaptemp += (MemoryMatrix[v][i] * g.nodes[i]['state'])
+
+        for i in list(g.nodes):
+            overlaptemp += (MemoryMatrix[target][i] * g.nodes[i]['state'])
 
         hammingval = (hammingtemp / (m * 2))
-        overlapval = (overlaptemp / (n * m))
+        overlapval = (overlaptemp / n)
         q = ((n - hammingval) / n)
         X.append(p)
         Y.append(q)
