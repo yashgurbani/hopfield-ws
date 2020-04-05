@@ -3,7 +3,7 @@
 """
 @author: yash
 """
-#change
+# change
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
 import numpy as np
@@ -36,7 +36,6 @@ n_i = int(input('Enter # of iterations each run'))
 ensembleCount = int(input('Enter # of runs to average over'))
 target = int(input('Select memory state which when added noise gives initial state'))
 
-
 suffix = datetime.datetime.now().strftime("%m%d_%H%M%S")
 filename = "_".join([str(n), str(m), str(k), str(n_i), str(ensembleCount), suffix])
 np.savetxt(filename + "-ms-r.csv", np.column_stack((np.transpose(MemoryMatrix))), delimiter=",", fmt='%s')
@@ -54,11 +53,10 @@ for b in tqdm(range(ensembleCount)):
     X = []
     p = 0
 
-    rs = random.sample(range(0,n), flip)
+    rs = random.sample(range(0, n), flip)
 
-    for p in list(rs): #randomly pick up 25 percent and flip them
+    for p in list(rs):  # randomly pick up 25 percent and flip them
         u[p] = (MemoryMatrix[target][p] * -1)
-
 
     for rho in (range(0, 100)):  # for this given random matrix, loop over different p values
 
@@ -114,7 +112,6 @@ for b in tqdm(range(ensembleCount)):
         Y.append(q)
         Y2.append(overlapval)
 
-
     OverlapMatrixn[b] = Y2
     EtaMatrixn[b] = Y
 
@@ -141,7 +138,7 @@ plt.plot(X, col_totalsOavg, color="blue")
 suffix = datetime.datetime.now().strftime("%m%d_%H%M%S")
 filename = "_".join([str(n), str(m), str(k), str(n_i), str(ensembleCount), suffix])
 plt.autoscale()
-plt.savefig(filename, dpi=200, bbox_inches = "tight")
+plt.savefig(filename, dpi=200, bbox_inches="tight")
 plt.show()
 
 np.savetxt(filename + "-r-Q.csv", np.column_stack((X, col_totalsEavg)), delimiter=",", fmt='%s')
