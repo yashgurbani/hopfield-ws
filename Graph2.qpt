@@ -1,0 +1,48 @@
+SciDAVis 1.26.0 template file
+<multiLayer>	1	1
+geometry	537	17	800	645	active
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	1327	510
+Alignement	0	0
+<graph>
+ggeometry	3	5	782	587
+PlotTitle	Variation of Performance with Rewiring Probability<br>1000 neurons, 25 memory states, 150 nearest neighbours (ran)	#ff000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffffff	255
+Margin	0
+Border	0	#ff000000
+grid	0	0	0	0	#ff0000ff	0	0	#ffa0a0a4	2	0	#ff0000ff	0	0	#ffa0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	rewiring probability p<br>	average overlap m<br>			
+AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Ubuntu	14	75	0	0	0
+ScaleFont0	Ubuntu	12	75	0	0	0
+ScaleFont1	Ubuntu	19	75	0	0	0
+ScaleFont2	Ubuntu	12	75	0	0	0
+ScaleFont3	Ubuntu	19	75	0	0	0
+AxisFont0	Ubuntu	10	50	1	0	0
+AxisFont1	Ubuntu	19	50	0	0	0
+AxisFont2	Ubuntu	10	50	1	0	0
+AxisFont3	Ubuntu	19	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesNumberColors	#ff5d5d5d	#ff5d5d5d	#ff5d5d5d	#ff5d5d5d
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffffff	255
+scale	0	0.65	1	0	8	5	0	0
+scale	1	0.65	1	0	8	5	0	0
+scale	2	0	1	0	8	5	0	0
+scale	3	0	1	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	0.781609195402299	0.721047008547009	Ubuntu	9	75	0	0	0	#ff000000	1	0	#ffffff	0		\c{1}10000 iterations	\c{2}5000 iterations	\c{3}3000 iterations	\c{4}2000 iterations	\c{5}1000 iterations		</legend>
+</graph>
+</multiLayer>
