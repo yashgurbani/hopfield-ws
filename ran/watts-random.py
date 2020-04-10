@@ -117,8 +117,8 @@ for b in tqdm(range(ensembleCount)):
 
     b = b + 1
 
-col_totalsE = np.sum(OverlapMatrixn, 0)
-col_totalsO = np.sum(EtaMatrixn, 0)
+col_totalsE = np.sum(EtaMatrixn, 0)
+col_totalsO = np.sum(OverlapMatrixnn, 0)
 
 col_totalsEavg = [(x / ensembleCount) for x in col_totalsE]
 col_totalsOavg = [(x / ensembleCount) for x in col_totalsO]
@@ -141,5 +141,5 @@ plt.autoscale()
 plt.savefig(filename, dpi=200, bbox_inches="tight")
 plt.show()
 
-np.savetxt(filename + "-r-Q.csv", np.column_stack((X, col_totalsEavg)), delimiter=",", fmt='%s')
-np.savetxt(filename + "-r-O.csv", np.column_stack((X, col_totalsOavg)), delimiter=",", fmt='%s')
+np.savetxt(filename + "-r-Qu.csv", np.column_stack((X, col_totalsEavg)), delimiter=",", fmt='%s')
+np.savetxt(filename + "-r-Ov.csv", np.column_stack((X, col_totalsOavg)), delimiter=",", fmt='%s')
