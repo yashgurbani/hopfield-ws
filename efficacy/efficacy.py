@@ -15,7 +15,7 @@ from tqdm import tqdm
 from random import randrange
 import random
 
-div = 100
+div = 10
 n = int(input('Enter # of neurons'))
 m = int(input('Enter # of memory states'))
 
@@ -50,7 +50,7 @@ for b in tqdm(range(ensembleCount)): #realizations
     Y2 = []
     X = []
 
-    for rho in (range(0, 100)):  # for this given random matrix, loop over different p values
+    for rho in (range(0, div+1)):  # for this given random matrix, loop over different p values
 
         p = (rho / div)
         hammingtemp = overlaptemp = 0
