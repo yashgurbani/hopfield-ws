@@ -22,7 +22,7 @@ m = int(input('Enter # of memory states'))
 k = int(input('Enter # of connected neighbours k'))
 n_i = int(input('Enter # of iterations each run'))
 ensembleCount = int(input('Enter # of realizations'))
-EfficacyMatrix = np.zeros((ensembleCount, div))  # initiate quality matrix
+EfficacyMatrix = np.zeros((ensembleCount, (div+1)))  # initiate quality matrix
 
 for b in tqdm(range(ensembleCount)): #realizations
 
