@@ -14,7 +14,7 @@ from tqdm import tqdm
 from random import randrange
 import random
 
-div = 100
+div = 10
 n = int(input('Enter # of neurons'))
 m = int(input('Enter # of memory states'))
 flip = round(0.25 * n)
@@ -62,7 +62,7 @@ for b in tqdm(range(ensembleCount)):
     for count in range(n_init, n_fin):  # sequentially pick up 25% of bits and flip them
         u[count] = (MemoryMatrix[target][count] * -1)
 
-    for rho in (range(100)):  # for this given random matrix, loop over different p values
+    for rho in (range(10)):  # for this given random matrix, loop over different p values
 
         p = (rho / div)
         hammingtemp = overlaptemp = 0
