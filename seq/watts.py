@@ -32,8 +32,8 @@ for a in range(0, m):
     x = 0
 
 k = int(input('Enter # of connected neighbours k'))
-n_i = int(input('Enter # of iterations each run'))
-ensembleCount = int(input('Enter # of runs to average over'))
+n_i = 10000 #int(input('Enter # of iterations each run'))
+ensembleCount = 1000 #int(input('Enter # of runs to average over'))
 #target = int(input('Select memory state which when added noise gives initial state'))
 
 suffix = datetime.datetime.now().strftime("%m%d_%H%M%S")
