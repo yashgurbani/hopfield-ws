@@ -5,6 +5,9 @@
 """
 
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import figure
+from random import choice
+from matplotlib import cm
 import numpy as np
 import networkx as nx
 from random import choice
@@ -27,7 +30,7 @@ for a in range(0, m):
     x = 0
 
 flip = round(0.25 * n)
-n_i = 1000
+n_i = 50
 
 Y = []
 X = []
@@ -44,6 +47,18 @@ for st in range(0, n):
     g.nodes[st]['state'] = u[st]
 
 alpha = (m/n)
+
+g.pos = {}
+for x in range(4):
+   for y in range(4):
+       g.pos[y * 4 + x] = (x, -y)
+
+
+nx.draw(g, pos = g.pos, cmap = cm.jet, vmin = -1, vmax = 1, node_color = [g.nodes[i]['state'] for i in
+g.nodes])
+plt.show()
+print ("Initial Graph")
+
 
 # train the network with m memory states
 for i, j in g.edges:
@@ -66,10 +81,10 @@ for z in range(0, n_i):
     for q in range(m):
         for i in list(g.nodes):
             hamming_distance [z, q] += (abs(g.nodes[i]['state'] - MemoryMatrix[q][i])/2)
-
     z = z + 1
 
-
+nx.draw(g, pos = g.pos, cmap = cm.jet, vmin = -1, vmax = 1, node_color = [g.nodes[i]['state'] for i in g.nodes])
+plt.show()
 fig = plt.figure(figsize = (8, 8))
 plt.plot(hamming_distance)
 plt.xlabel('No of Iterations')
