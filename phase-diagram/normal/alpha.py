@@ -23,10 +23,9 @@ flip = round(0.2 * n)
 n_i = 10000
 steps = int(input('Enter # of steps in iteration of m (resolution)'))
 
-ErrorMatrixn = np.zeros((1, round((m_f-1)/2)))  # initiate quality matrix
+OverlapMatrixn = np.zeros((ensembleCount, round((m_f-1))))  # initiate quality matrix
 
 for b in tqdm(range(0, ensembleCount)):
-    
 
     Y = []
     X = []
@@ -73,13 +72,14 @@ for b in tqdm(range(0, ensembleCount)):
             overlaptemp += (g.nodes[i]['state'] * MemoryMatrix[1][i])
 
         X.append(alpha)
-        Y.append(hammingtemp)
+        Y.append(overlaptemp)
+        
+    OverlapMatrixn[b] = Y
 
+col_totalsO = [sum(x) for x in zip(*OverlapMatrixn)]
+col_totalsOavg = [(x / (n*ensembleCount)) for x in col_totalsO]
 
-col_totalsO = [sum(x) for x in zip(*EtaMatrixn)]
-col_totalsOavg = [(x / ensembleCount) for x in col_totalsE]
-
-# set up figure and axes
+# set up fiagure and axes
 plt.plot(X, col_totalsOavg, color="magenta")
 plt.ylabel("overlap with the target state")
 plt.xlabel("alpha")
