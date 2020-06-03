@@ -29,7 +29,7 @@ flip = round(0.2 * n)
 n_i = 10000
 steps = int(input('Enter # of steps in iteration of m (resolution)'))
 
-OverlapMatrixn = np.zeros((ensembleCount, round((m_f-1))))  # initiate quality matrix
+OverlapMatrixn = np.zeros((ensembleCount, round((m_f-1)/steps)))  # initiate quality matrix
 
 for b in tqdm(range(0, ensembleCount)):
     target = random.randint(0, 2)
@@ -94,9 +94,14 @@ col_totalsOavg = [(x / (n*ensembleCount)) for x in col_totalsO]
 plt.plot(X, col_totalsOavg, color="magenta")
 plt.ylabel("overlap with the target state")
 plt.xlabel("alpha")
-png = ".png"
 suffix = datetime.datetime.now().strftime("%m%d_%H%M%S")
-filename = "_".join([str(n), suffix])
+
+if (type==1):
+ filename = "_".join([str(type), str(n), str(k), str(p), suffix])
+
+if (type==2):
+ filename = "_".join([str(type), str(n), suffix])
+
 plt.autoscale()
 plt.savefig(filename, dpi=200, bbox_inches = "tight")
 plt.show()
