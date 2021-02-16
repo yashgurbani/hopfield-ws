@@ -1,0 +1,82 @@
+SciDAVis 2.1.4 project file
+<scripting-lang>	muParser
+<windows>	5
+<table>
+3053
+<table creation_time="1920-05-06 06:59:00:000" caption_spec="%n%C{ - }%c" name="Table5" columns="2" rows="10"><comment><![CDATA[/home/yash/PycharmProjects/watts-hopfield/seq/1000_17_200_10000_1000_0515_211450-s-O.csv]]></comment><column creation_time="2020-05-06 06:59:28:051" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-05-06 06:59:28:051" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-05-06 06:59:28:051" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">1.0000000000000001e-01</row><row type="TypeDouble" index="2" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="3" invalid="no">2.9999999999999999e-01</row><row type="TypeDouble" index="4" invalid="no">4.0000000000000002e-01</row><row type="TypeDouble" index="5" invalid="no">5.0000000000000000e-01</row><row type="TypeDouble" index="6" invalid="no">5.9999999999999998e-01</row><row type="TypeDouble" index="7" invalid="no">6.9999999999999996e-01</row><row type="TypeDouble" index="8" invalid="no">8.0000000000000004e-01</row><row type="TypeDouble" index="9" invalid="no">9.0000000000000002e-01</row></column><column creation_time="2020-05-06 06:59:28:051" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-05-06 06:59:28:051" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-05-06 06:59:28:051" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">5.3538199999999958e-01</row><row type="TypeDouble" index="1" invalid="no">6.8918199999999974e-01</row><row type="TypeDouble" index="2" invalid="no">8.8682400000000039e-01</row><row type="TypeDouble" index="3" invalid="no">9.9800200000000505e-01</row><row type="TypeDouble" index="4" invalid="no">9.9952000000000318e-01</row><row type="TypeDouble" index="5" invalid="no">9.9959600000000326e-01</row><row type="TypeDouble" index="6" invalid="no">9.9961200000000294e-01</row><row type="TypeDouble" index="7" invalid="no">9.9955200000000299e-01</row><row type="TypeDouble" index="8" invalid="no">9.9957600000000313e-01</row><row type="TypeDouble" index="9" invalid="no">9.9962800000000285e-01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	502	0	728	283	
+
+</table>
+<table>
+3051
+<table creation_time="1920-05-06 07:00:00:000" caption_spec="%n%C{ - }%c" name="Table7" columns="2" rows="10"><comment><![CDATA[/home/yash/PycharmProjects/watts-hopfield/seq/1000_2_20_10000_1000_0515_000400-s-O.csv]]></comment><column creation_time="2020-05-06 07:00:53:243" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-05-06 07:00:53:243" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-05-06 07:00:53:243" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">1.0000000000000001e-01</row><row type="TypeDouble" index="2" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="3" invalid="no">2.9999999999999999e-01</row><row type="TypeDouble" index="4" invalid="no">4.0000000000000002e-01</row><row type="TypeDouble" index="5" invalid="no">5.0000000000000000e-01</row><row type="TypeDouble" index="6" invalid="no">5.9999999999999998e-01</row><row type="TypeDouble" index="7" invalid="no">6.9999999999999996e-01</row><row type="TypeDouble" index="8" invalid="no">8.0000000000000004e-01</row><row type="TypeDouble" index="9" invalid="no">9.0000000000000002e-01</row></column><column creation_time="2020-05-06 07:00:53:243" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-05-06 07:00:53:243" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-05-06 07:00:53:243" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">5.0022200000000050e-01</row><row type="TypeDouble" index="1" invalid="no">5.0601799999999930e-01</row><row type="TypeDouble" index="2" invalid="no">5.1639399999999802e-01</row><row type="TypeDouble" index="3" invalid="no">5.4581599999999875e-01</row><row type="TypeDouble" index="4" invalid="no">7.2232000000000052e-01</row><row type="TypeDouble" index="5" invalid="no">9.9306800000000361e-01</row><row type="TypeDouble" index="6" invalid="no">9.9992400000000070e-01</row><row type="TypeDouble" index="7" invalid="no">9.9997400000000036e-01</row><row type="TypeDouble" index="8" invalid="no">9.9996000000000029e-01</row><row type="TypeDouble" index="9" invalid="no">9.9998000000000020e-01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	126	-85	728	459	
+
+</table>
+<table>
+3051
+<table creation_time="1920-05-06 07:00:00:000" caption_spec="%n%C{ - }%c" name="Table8" columns="2" rows="10"><comment><![CDATA[/home/yash/PycharmProjects/watts-hopfield/seq/1000_4_50_10000_1000_0515_042534-s-O.csv]]></comment><column creation_time="2020-05-06 07:00:53:257" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-05-06 07:00:53:257" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-05-06 07:00:53:257" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">1.0000000000000001e-01</row><row type="TypeDouble" index="2" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="3" invalid="no">2.9999999999999999e-01</row><row type="TypeDouble" index="4" invalid="no">4.0000000000000002e-01</row><row type="TypeDouble" index="5" invalid="no">5.0000000000000000e-01</row><row type="TypeDouble" index="6" invalid="no">5.9999999999999998e-01</row><row type="TypeDouble" index="7" invalid="no">6.9999999999999996e-01</row><row type="TypeDouble" index="8" invalid="no">8.0000000000000004e-01</row><row type="TypeDouble" index="9" invalid="no">9.0000000000000002e-01</row></column><column creation_time="2020-05-06 07:00:53:257" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-05-06 07:00:53:257" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-05-06 07:00:53:258" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">4.9985800000000019e-01</row><row type="TypeDouble" index="1" invalid="no">5.1845399999999930e-01</row><row type="TypeDouble" index="2" invalid="no">5.5515599999999921e-01</row><row type="TypeDouble" index="3" invalid="no">6.8379199999999984e-01</row><row type="TypeDouble" index="4" invalid="no">9.7299000000000269e-01</row><row type="TypeDouble" index="5" invalid="no">9.9979600000000157e-01</row><row type="TypeDouble" index="6" invalid="no">9.9990000000000079e-01</row><row type="TypeDouble" index="7" invalid="no">9.9988200000000094e-01</row><row type="TypeDouble" index="8" invalid="no">9.9989400000000095e-01</row><row type="TypeDouble" index="9" invalid="no">9.9992200000000109e-01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	478	176	728	399	
+
+</table>
+<table>
+3053
+<table creation_time="2020-05-06 07:37:49:319" caption_spec="%n%C{ - }%c" name="Table10" columns="2" rows="10"><comment><![CDATA[/home/yash/PycharmProjects/watts-hopfield/seq/1000_8_100_10000_1000_0515_111357-s-O.csv]]></comment><column creation_time="2020-05-06 07:37:49:318" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-05-06 07:37:49:318" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-05-06 07:37:49:318" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">1.0000000000000001e-01</row><row type="TypeDouble" index="2" invalid="no">2.0000000000000001e-01</row><row type="TypeDouble" index="3" invalid="no">2.9999999999999999e-01</row><row type="TypeDouble" index="4" invalid="no">4.0000000000000002e-01</row><row type="TypeDouble" index="5" invalid="no">5.0000000000000000e-01</row><row type="TypeDouble" index="6" invalid="no">5.9999999999999998e-01</row><row type="TypeDouble" index="7" invalid="no">6.9999999999999996e-01</row><row type="TypeDouble" index="8" invalid="no">8.0000000000000004e-01</row><row type="TypeDouble" index="9" invalid="no">9.0000000000000002e-01</row></column><column creation_time="2020-05-06 07:37:49:319" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2020-05-06 07:37:49:319" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2020-05-06 07:37:49:319" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">4.9944599999999995e-01</row><row type="TypeDouble" index="1" invalid="no">5.5801399999999879e-01</row><row type="TypeDouble" index="2" invalid="no">6.9101400000000146e-01</row><row type="TypeDouble" index="3" invalid="no">9.1320000000000046e-01</row><row type="TypeDouble" index="4" invalid="no">9.9859400000000309e-01</row><row type="TypeDouble" index="5" invalid="no">9.9974800000000230e-01</row><row type="TypeDouble" index="6" invalid="no">9.9978800000000212e-01</row><row type="TypeDouble" index="7" invalid="no">9.9982000000000115e-01</row><row type="TypeDouble" index="8" invalid="no">9.9983800000000100e-01</row><row type="TypeDouble" index="9" invalid="no">9.9982400000000116e-01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	10	0	728	459	
+
+</table>
+<multiLayer>
+Graph2	1	1	05/04/20 6:02 PM
+geometry	699	17	719	645	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	709	517
+Alignement	0	0
+<graph>
+ggeometry	7	1	701	587
+PlotTitle	Effect of Varying Connectivity<br>1000 neurons with sequential noise<br>	#ff000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffffff	255
+Margin	0
+Border	0	#ff000000
+grid	0	0	0	0	#ff0000ff	0	1	#ffa0a0a4	2	1	#ff0000ff	0	1	#ffa0a0a4	2	1	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	probability of rewiring<br>	overlap with the target state 			
+AxesTitleColors	#ff000000	#ff000000	#ff000000	#ff000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	Verdana	12	75	0	0	0
+ScaleFont0	Verdana	11	50	0	0	0
+ScaleFont1	Ubuntu	11	75	0	0	0
+ScaleFont2	Verdana	11	50	0	0	0
+ScaleFont3	Ubuntu	11	75	0	0	0
+AxisFont0	Ubuntu	9	50	0	0	0
+AxisFont1	Ubuntu	9	50	0	0	0
+AxisFont2	Ubuntu	9	50	0	0	0
+AxisFont3	Ubuntu	9	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesNumberColors	#ff000000	#ff000000	#ff000000	#ff000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffffff	255
+curve	Table8_1	Table8_2	2	1	#ffff8000	0	1	7	6	#ff000000	-1	0	#ff000000	31	1	0	64		2	0	0	9	1
+curve	Table10_1	Table10_2	0	1	#ff8000ff	0	1	7	6	#ff000000	-1	0	#ff000000	31	1	0	64		2	0	0	9	1
+curve	Table7_1	Table7_2	2	1	#ff8e063b	0	1	7	6	#ff000000	-1	0	#ff000000	31	1	0	64		2	0	0	9	1
+curve	Table5_1	Table5_2	2	1	#ff008000	0	1	7	6	#ff000000	-1	0	#ff000000	31	1	0	64		2	0	0	9	1
+scale	0	0.4	1.1	0	7	5	0	0
+scale	1	0.4	1.1	0	8	5	0	0
+scale	2	0	1	0	7	5	0	0
+scale	3	0	1	0	6	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	0.737577639751553	0.545253863134658	Ubuntu	10	75	0	0	0	#ff000000	1	0	#00ffffff	0	\c{3}k = 20, m = 2	\c{1}k = 50, m = 4	\c{2}k = 100, m = 8	\c{4}k = 200, m = 17	</legend>
+</graph>
+</multiLayer>
+<log>
+</log>

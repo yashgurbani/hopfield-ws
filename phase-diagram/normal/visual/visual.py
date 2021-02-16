@@ -9,11 +9,20 @@ import numpy as np
 import networkx as nx
 from random import choice
 import datetime
+import mpl_toolkits.axes_grid1 as axes_grid1
+
 from tqdm import tqdm
 import random
 
+type = int(input('Enter network type: 1 for a fully connected network, 2 for a watts-strogatz network'))
+
 n = int(input('Enter # of neurons'))
 m = int(input('Enter # of memory states'))
+
+if (type == 2):
+ k = int(input('Enter # of nearest neighbours k'))
+ p = float(input('Enter probability of rewiring p'))
+
 
 MemoryMatrix = np.zeros((m, n))
 W = np.zeros((n, n))
@@ -27,18 +36,21 @@ for a in range(0, m):
     x = 0
 
 flip = round(0.25 * n)
-n_i = 1000
 
 Y = []
 X = []
-u = []
 u = MemoryMatrix[1].copy()  # copy target M to initial state
 rs = random.sample(range(0, n), flip)
+n_i = 10000
 
 for z in list(rs):  # randomly pick up 25 percent and flip them
     u[z] = (MemoryMatrix[1][z] * -1)
 
-g = nx.complete_graph(n)
+if (type == 1):
+        g = nx.complete_graph(n)
+if (type == 2):
+        g = nx.watts_strogatz_graph(n, k, p)  # use for watts strogatz network
+
 st = 0
 for st in range(0, n):
     g.nodes[st]['state'] = u[st]
@@ -54,8 +66,16 @@ for i, j in g.edges:
     W[i][j] = g.edges[i, j]['weight']
     W[j][i] = W[i][j]
 
-plt.imshow(W, cmap='gray')
-plt.show()
+
+fig = plt.figure()
+grid = axes_grid1.AxesGrid(
+    fig, 111, nrows_ncols=(1, 1), axes_pad = 0.5, cbar_location = "right",
+    cbar_mode="each", cbar_size="15%", cbar_pad="5%",)
+
+im0 = grid[0].imshow(W, cmap='gray', interpolation='nearest')
+grid.cbar_axes[0].colorbar(im0)
+
+plt.savefig('/tmp/test.png', bbox_inches='tight', pad_inches=0.0, dpi=200,)
 hamming_distance = np.zeros((n_i, m))
 
 # evolve according to hopfield dynamics, n_i iterations
@@ -66,7 +86,6 @@ for z in range(0, n_i):
     for q in range(m):
         for i in list(g.nodes):
             hamming_distance [z, q] += (abs(g.nodes[i]['state'] - MemoryMatrix[q][i])/2)
-
     z = z + 1
 
 
